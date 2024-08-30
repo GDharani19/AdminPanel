@@ -1,0 +1,72 @@
+/* src/components/AdminPanel.css */
+.admin-panel {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 100%; /* Full width of the viewport */
+    box-sizing: border-box; /* Ensure padding and borders are included in the width */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ff6f00; /* Bright orange for headings */
+}
+
+.sections-container {
+    display: flex;
+    justify-content: space-between; /* Space between sections */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.section {
+    flex: 1; /* Allow sections to grow and shrink */
+    margin: 10px; /* Margin for spacing */
+    background: #1e1e1e; /* Slightly lighter black for sections */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    min-width: 300px; /* Minimum width for responsiveness */
+}
+
+.data-card {
+    border: 1px solid var(--card-border); /* Card border color based on theme */
+    border-radius: 8px; /* Slightly rounded corners */
+    padding: 15px;
+    background-color: var(--card-background); /* Card background color based on theme */
+    color: var(--text-color); /* Text color based on theme */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+    margin-bottom: 10px; /* Spacing between cards */
+}
+
+.data-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+    cursor: pointer;
+}
+
+.data-card p {
+    margin: 10px 0;
+    color: var(--text-color); /* Ensure paragraph text inherits the correct color */
+}
+
+.data-card strong {
+    color: #ff6f00; /* Orange color for labels */
+}
+
+/* Default light theme */
+:root {
+    --background-color: #ffffff; /* White background */
+    --text-color: #000000; /* Black text color */
+    --card-background: #f4f4f4; /* Light gray for card background */
+    --card-border: #ddd; /* Light gray for card border */
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+    --background-color: #333333; /* Dark background */
+    --text-color: #ffffff; /* White text color */
+    --card-background: #444444; /* Darker card background */
+    --card-border: #555555; /* Darker card border */
+}
